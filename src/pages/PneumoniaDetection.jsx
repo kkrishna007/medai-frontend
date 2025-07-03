@@ -4,6 +4,9 @@ import ImageUploader from '../components/ImageUploader';
 import ResultDisplay from '../components/ResultDisplay';
 import PneumoniaExplanation from '../components/PneumoniaExplanation';
 import { predictPneumonia } from '../utils/api';
+import { FaDownload } from 'react-icons/fa';
+
+
 import './ModulePage.css';
 
 function PneumoniaDetection() {
@@ -29,10 +32,21 @@ function PneumoniaDetection() {
 
   return (
     <div className="module-page">
-      <h1>Pneumonia Detection <span role="img" aria-label="lungs">🫁</span></h1>
-      <p className="module-description">
-        Upload a chest X-ray image to detect pneumonia using our AI model. The system will analyze the image and provide a diagnosis with explanation.
-      </p>
+          <div className="header-with-button">
+            <h1>Pneumonia Detection 🫁</h1>
+            <a
+              href="https://drive.google.com/drive/folders/1K3YP2rI_wZ7IR6jt9MuTc9rbyvwWgtj7?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-button"
+            >
+              <FaDownload style={{ marginRight: '8px' }} />
+              Download Test Dataset
+            </a>
+          </div>
+          <p className="module-description">
+            Upload a chest X-ray image to detect pneumonia using our AI model. The system will analyze the image and provide a diagnosis with explanation.
+          </p>
 
       <div className="module-content">
         <div className="upload-section">
